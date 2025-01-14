@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+
 }
 
 .navbar {
@@ -8,21 +9,27 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: #333;
+    background-color:#cfd8dc;
     color: #fff;
     padding: 10px 0;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.2);
 }
 .navbar ol {
    align-self: center;
 }
 .navbar-text {
     display: inline-block;
-    text-decoration: underline;
+    text-decoration: none;
     font-size: 20px;
     padding: 0 15px;
+    color: black;
+}
+.navbar a:visited {
+    color: black;
 }
 .navbar-text a {
-    color:white;
+    color:black;
+    text-decoration: none;
 }
 .navbar-text a::after {
     display: inline-block;
@@ -37,12 +44,13 @@ body {
     display:flex;
     flex-direction: column;
     width: 100%;
+    height: 100%;
+
 }
 .content {
     padding:8px;
-    width: 90%;
+    width: 70%;
     align-self: center;
-    border: 1px solid black;
     margin-top: 15px;
 
 }
@@ -50,9 +58,9 @@ body {
     padding:8px;
     width: 50%;
     align-self: center;
-    border: 1px solid black;
     margin-top: 15px;
-    height:80%;
+    height:100vh;
+    background-color: white;
 }
 .wrapper-box {
     width: 100%;
@@ -61,16 +69,19 @@ body {
     justify-self: center;
 }
 .content-text-box {
-    border: 1px solid black;
     width: 100%;
-    margin-right: 5px
+    margin-right: 5px;
+    padding: 10px;
+    border-radius: 5px;
 }
 .content-assignment-text {
     width: 50%;
-    margin-right: 5px
+    margin-right: 5px;
+    padding-left: 2rem;
 }
 .content-picture-box {
     width: 50%;
+    border-radius: 3px;
 }
 .rubrik {
     justify-self: center;
@@ -78,4 +89,8 @@ body {
 .programming-picture {
     max-width:100%;
     max-height: 100%;
+}
+footer {
+    background-color: transparent;
+    color: white;
 }
