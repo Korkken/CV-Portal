@@ -1,38 +1,95 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-
+    background-image: url('backgroundimage.jpg')
 }
 h1 {
-    color: black;
+    color: white;
+    padding-left: 1rem;
 }
+@font-face {
+    font-family: Lato-regular;
+    src: url(Lato-Regular.ttf);
+    font-weight: 100;
+  }
 .navbar {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content:space-between;
-    background-color:#cfd8dc;
+    background-color:#1777f5;
     color: #fff;
     padding: 0 0.5rem;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,.2);
 }
 .navbar ol {
    align-self: center;
-   padding: 0 0.5rem;
+   padding-right: 1rem;
 }
 .navbar-text {
     display: inline-block;
     text-decoration: none;
     font-size: 20px;
     padding: 0 0.5rem;
-    color: black;
+    color: White;
 }
 .navbar a:visited {
-    color: black;
+    color: White;
 }
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #1777f5;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.mobile-menu-list {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: white;
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.mobile-menu-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.mobile-menu-list li:last-child {
+    border-bottom: none;
+}
+
+.mobile-menu-list a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.mobile-menu-list a:hover {
+    background: #ebf9fd;
+}
+
+.mobile-menu-list.active {
+    display: block;
+}
+
+
 .navbar-text a {
     color:black;
     text-decoration: none;
+}
+.navbar-text {
+    display: inline-block;
 }
 .navbar-text a::after {
     display: inline-block;
@@ -57,24 +114,38 @@ h1 {
 
 }
 .content-assignments {
-    padding:8px;
+    padding: 1rem 1rem;
     width: 50%;
     align-self: center;
     margin-top: 15px;
-    height:100vh;
-    background-color: white;
+    height:100%;
+    font-family: Lato-regular;
 }
 .wrapper-box {
     width: 100%;
     display:flex;
     flex-direction: row;
     justify-self: center;
+    height: 90%;
+    flex-wrap: wrap;
 }
 .content-text-box {
     width: 100%;
     margin-right: 5px;
     padding: 10px;
     border-radius: 5px;
+    min-height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.cv-text-box {
+    width: 40%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    min-height: 100%;
+    background-color:#ebf9fd ;
 }
 .content-assignment-text {
     width: 50%;
@@ -82,8 +153,13 @@ h1 {
     padding-left: 2rem;
 }
 .content-picture-box {
-    width: 50%;
-    border-radius: 3px;
+    width: 30%;
+    border-radius: 10px;
+    background-color: #ebf9fd;
+    margin: 5px;
+}
+.content-picture-box p, h3 {
+    padding: .5rem;
 }
 .rubrik {
     justify-self: center;
@@ -93,6 +169,86 @@ h1 {
     max-height: 100%;
 }
 footer {
-    background-color: transparent;
-    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem; 
 }
+.assignments-link {
+    margin-top: .5rem;
+    font-size: 1rem;
+}
+.assignments-link a {
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+}
+li {
+    list-style-type: none;
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+.modal button {
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+@media screen and (max-width: 992px) {
+    .mobile-menu {
+        display: block;
+    }
+    .navbar a {
+        display: none;
+    } 
+    .wrapper-box {
+        overflow: hidden;
+        display: block;
+        justify-content: center;
+        width: 90%;
+    }
+    .content-assignments {
+        width: 90%;
+    }
+    .body-div {
+        flex-direction: column;
+    }
+    .content-picture-box {
+        width: 100%;
+        margin: auto;
+    }
+    .content-assignment-text {
+        width: 100%;
+    }
+    .content-picture-box {
+        border-radius: 10px;
+        padding: .5rem;
+        margin: 0;
+        width: 100%;
+    }
+    footer {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        height: 2.5rem; 
+    }
+    }

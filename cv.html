@@ -17,17 +17,79 @@
               <li class="navbar-text"><a href="./uppgifter.html">Assignments</a></li>
               <li class="navbar-text"><a href="./information.html">About me</a></li>
               <li class="navbar-text"><a class="active" href="./cv.html">CV</a></li>
-              <li class="navbar-text"><a href="">Something</a></li>
           </ol>
+          <div class="mobile-menu" id="menu-button">
+            ☰
+        </div>
       </nav>
+      <ol class="mobile-menu-list" id="mobile-menu-list">
+        <li class="navbar-text"><a href="./index.html">Home</a></li>
+        <li class="navbar-text"><a href="./uppgifter.html">Assignments</a></li>
+        <li class="navbar-text"><a href="./information.html">About me</a></li>
+        <li class="navbar-text"><a class="active" href="./cv.html">CV</a></li>
+      </ol>
         <div id="body-div">
-            <div class="content">
-                <h1 class="rubrik">CV</h1>  
-                <div class="content-text-box">hejsan</div>
+          <div class="overlay" id="overlay"></div>
+            <div class="modal" id="modal">
+                <p>Hejsan svejsan du har skrivit in 1337 under denna trevliga dag, det var ju onödigt</p>
+                <button onclick="closeModal()">Stäng</button>
+            </div>
+            <div class="content-assignments">
+                <h2 class="rubrik">CV</h2>  
+                <div class="content-text-box">
+                  <section class="cv-text-box">
+                    <h2>Arbetslivserfarenhet</h2>
+                    <h4>Entit AB</h4>
+                    Systemutvecklare April 2021 - Jan 2023
+                    <p>Skapa en 3d configurator på webben så att man kan ladda ner balkongen till ett cadprogram. Skapat med .NET och Javascript</p>
+                    <h4>Balco AB Uppdrag</h4>
+                    Systemutvecklare 2021 - 2022
+                    <p>Skapa ett formulär för interna produkter med .NET</p>
+                    <h4>Balco AB Uppdrag</h4>
+                    Systemutvecklare 2021 - 2022
+                    <p>Skapa ett formulär för förslag från kunder med React och .NET</p>
+                    <h4>Ping Pong AB</h4>
+                    Systemutvecklare Oktober 2019 - juni 2020
+                    <p>Skapa ett Learning management system med Vue.js och Kotlin</p>
+
+                  </section>
+                  <section class="cv-text-box">
+                    <h2>Kontakt</h2>
+                    <p>Tim Lappalainen</p>
+                      <p>070-8841180</p>
+                      Lappalainentim@gmail.com
+                      <p>Kubbegatan 30</p>
+                      12867 Sköndal
+                      https://www.linkedin.com/in/timlappalai
+                      nen/ 
+                    </p>
+                    <h2>Övriga kompetenser</h2>
+                    <p>
+                     <ol>
+                      <li>Officepaketet</li>
+                      <li>Git</li>
+                      <li>.NET</li>
+                      <li>Javascript</li>
+                      <li>Html&CSS</li>
+                      <li>React</li>
+                      <li>Vue</li>
+                     </ol>
+                    </p>
+                  </section>
+                  <section class="cv-text-box">
+                    <h2>Utbildning</h2>
+                    <h4>KYH</h4>
+                    <p>Frontend utvecklare Augusti 2018 - Januari 2021</p>
+                    Yrkeshögskoleutbildning inom Frontend utveckling
+                    <h4>Värmdö Gymnasium</h4>
+                    <p>Gymnasium 2011-2014</p>
+                    Teknikutbildning med inriktning informations och medieteknik
+                  </section>
+                </div>
             </div>
             
         </div>
-        
+        <footer onclick="easterEggOne()">Tim Lappalainen</footer>
     </main>
     <script src="index.js"></script>
   </body>

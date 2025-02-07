@@ -17,25 +17,39 @@
                 <li class="navbar-text"><a href="./uppgifter.html">Assignments</a></li>
                 <li class="navbar-text"><a class="active" href="./information.html">About me</a></li>
                 <li class="navbar-text"><a href="./cv.html">CV</a></li>
-                <li class="navbar-text"><a href="">Something</a></li>
             </ol>
+            <div class="mobile-menu" id="menu-button">
+              ☰
+          </div>
         </nav>
+        <ol class="mobile-menu-list" id="mobile-menu-list">
+          <li class="navbar-text"><a href="./index.html">Home</a></li>
+          <li class="navbar-text"><a href="./uppgifter.html">Assignments</a></li>
+          <li class="navbar-text"><a class="active" href="./information.html">About me</a></li>
+          <li class="navbar-text"><a href="./cv.html">CV</a></li>
+        </ol>
         <div id="body-div">
+          <div class="overlay" id="overlay"></div>
+            <div class="modal" id="modal">
+                <p>Hejsan svejsan du har skrivit in 1337 under denna trevliga dag, det var ju onödigt</p>
+                <button onclick="closeModal()">Stäng</button>
+            </div>
           <div class="content-assignments">
-            <h1 class="rubrik">Välkommen till min sida</h1>  
+            <h2 class="rubrik">Om mig</h2>  
             <div class="wrapper-box">
               <div class="content-picture-box">
                 <img  class="programming-picture" src="./programmingpicture.jpg"/>
               </div>
                 <div class="content-assignment-text">
-                    <p>Hejsan svejsan jag heter tim</p>
+                    <p>Mitt namn är Tim Lappalainen och jag är en stundent på Chas Academy och jag pluggar för att bli en fullstack utvecklare med inriktning .NET</p>
+                    <p>Jag har tidigare arbetat som frontend utvecklare och även systemutvecklare i några år och fick då intresset att gå och studera mer inom .NET utveckling</p>
                 </div>
                 
             </div>  
         </div>
-        <footer>Tim Lappalainen</footer>
-      </div>
         
+      </div>
+      <footer onclick="easterEggOne()">Tim Lappalainen</footer>
     </main>
   </body>
   <script src="index.js"></script>

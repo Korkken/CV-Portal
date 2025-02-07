@@ -17,17 +17,33 @@
               <li class="navbar-text"><a href="./uppgifter.html">Assignments</a></li>
               <li class="navbar-text"><a href="./information.html">About me</a></li>
               <li class="navbar-text"><a href="./cv.html">CV</a></li>
-              <li class="navbar-text"><a href="">Something</a></li>
           </ol>
+          <div class="mobile-menu" id="menu-button">
+            ☰
+        </div>
       </nav>
+      <ol class="mobile-menu-list" id="mobile-menu-list">
+        <li class="navbar-text"><a class="active" href="./index.html">Home</a></li>
+        <li class="navbar-text"><a href="./uppgifter.html">Assignments</a></li>
+        <li class="navbar-text"><a href="./information.html">About me</a></li>
+        <li class="navbar-text"><a href="./cv.html">CV</a></li>
+      </ol>
         <div id="body-div">
-            <div class="content">
-                <h1 class="rubrik">Välkommen till min sida</h1>  
-                <div class="content-text-box">hejsan</div>
+          <div class="overlay" id="overlay"></div>
+            <div class="modal" id="modal">
+                <p>Hejsan svejsan du har skrivit in 1337 under denna trevliga dag, det var ju onödigt</p>
+                <button onclick="closeModal()">Stäng</button>
+            </div>
+            <div class="content-assignments">
+                <h2 class="rubrik">Välkommen till min sida</h2>  
+                <div class="content-text-box">
+                  <p>Hej Mitt namn är Tim Lappalainen och jag är en student som håller på att plugga till Fullstack utvecklare med .NET</p>
+                  <p>På denna sida kan ni hitta vad jag har gjort för tidigare arbeten och även se mitt CV</p>
+                </div>
             </div>
             
         </div>
-        
+        <footer onclick="easterEggOne()">Tim Lappalainen</footer>
     </main>
     <script src="index.js"></script>
   </body>

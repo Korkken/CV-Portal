@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Website</title>
+    <title>Tims Portfolio</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
   </head>
@@ -17,32 +17,62 @@
                   <li class="navbar-text"><a class="active" href="./uppgifter.html">Assignments</a></li>
                   <li class="navbar-text"><a href="./information.html">About me</a></li>
                   <li class="navbar-text"><a href="./cv.html">CV</a></li>
-                  <li class="navbar-text"><a href="">Something</a></li>
               </ol>
+              <div class="mobile-menu" id="menu-button">
+                ☰
+            </div>
           </nav>
+          <ol class="mobile-menu-list" id="mobile-menu-list">
+            <li class="navbar-text"><a href="./index.html">Home</a></li>
+            <li class="navbar-text"><a class="active" href="./uppgifter.html">Assignments</a></li>
+            <li class="navbar-text"><a href="./information.html">About me</a></li>
+            <li class="navbar-text"><a href="./cv.html">CV</a></li>
+          </ol>
         <div id="body-div">
+            <div class="overlay" id="overlay"></div>
+            <div class="modal" id="modal">
+                <p>Hejsan svejsan du har skrivit in 1337 under denna trevliga dag, det var ju onödigt</p>
+                <button onclick="closeModal()">Stäng</button>
+            </div>
             <div class="content-assignments">
-                <h1 class="rubrik">Välkommen till min sida</h1>  
+                <h2 class="rubrik">Mina Uppgifter</h1>  
                 <div class="wrapper-box">
-                    <div class="content-assignment-text">
-                        <ol>
-                            <li class="assignments-link"><a href="https://github.com/ParreG/SlutProjekt-Bank">.NET bank slutprojekt</a></li>
-                            <li class="assignments-link"><href=""></href></li>
-                            <li class="assignments-link">Bank slutprojekt</li>
-                            <li class="assignments-link">Bank slutprojekt</li>
-                            <li class="assignments-link">Bank slutprojekt</li>
-            
-                        </ol>
-                    </div>
-                    <div class="content-picture-box">
-                        <img  class="programming-picture" src="./programmingpicture.jpg"/>
-                    </div>
+                    <section class="content-picture-box">
+                      <a href="https://github.com/ParreG/SlutProjekt-Bank"><img class="programming-picture" src="programmingpicture.jpg"></a>
+                      <h3>Slutprojekt .NET</h3>
+                      <p>Detta var ett slutarbete som utfördes i grupp under .NET kursen</p>
+                    </section>
+                    <section class="content-picture-box">
+                      <a href="https://github.com/Korkken/DatabasLab3"><img class="programming-picture" src="programmingpicture.jpg"></a>
+                      <h3>Slutprojekt databaser</h3>
+                      <p>Detta var slutprojektet i databaskursen</p>
+                    </section>
+                    <section class="content-picture-box">
+                      <a href="https://github.com/Korkken/ByteBasket"><img class="programming-picture" src="programmingpicture.jpg"></a>
+                      <h3>Bytebasket</h3>
+                      <p>En liten övning i .NET kursen</p>
+                    </section>
+                    <section class="content-picture-box">
+                      <a href="https://github.com/Korkken/Datadetective"><img class="programming-picture" src="programmingpicture.jpg"></a>
+                      <h3>Datadetective</h3>
+                      <p>En till övning i .NET kursen</p>
+                    </section>
+                    <section class="content-picture-box">
+                      <a href="https://github.com/Korkken/OOPGenericCollections"><img class="programming-picture" src="programmingpicture.jpg"></a>
+                      <h3>OOPGenericCollections</h3>
+                      <p>En övning i .NET kursen</p>
+                    </section>
+                    <section class="content-picture-box">
+                      <a href="https://github.com/Korkken/OOPArv"><img class="programming-picture" src="programmingpicture.jpg"></a>
+                      <h3>OOPArv</h3>
+                      <p>En liten övning om arv i .NET</p>
+                    </section>
                 </div>
                 
             </div>
-            <footer>Tim Lappalainen</footer>
+            
         </div>
-        
+        <footer onclick="easterEggOne()">Tim Lappalainen</footer>
     </main>
     <script src="index.js"></script>
   </body>
